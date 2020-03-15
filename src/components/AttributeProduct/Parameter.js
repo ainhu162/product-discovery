@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 const renderParameter = (attrs, classes) => {
   let result = null;
-  if (attrs.length > 0) {
+  if (attrs && attrs.length > 0) {
     result = attrs.map((attr, index) => {
       return (
         <tr
@@ -32,7 +32,7 @@ export const Parameter = ({ attr }) => {
       </div>
       <Button onClick={()=>{ setIsShow(prev => !prev)}} className={classes.seeMore}>
         {!isShow && <div className={classes.moreEffect}></div>}
-        {!isShow ? <div>Hiển thị nhiều hơn <ExpandMoreIcon /></div> : <div>Ẩn bớt <ExpandLessIcon /></div>}
+        {!isShow ? <>Hiển thị nhiều hơn <ExpandMoreIcon /></> : <>Ẩn bớt <ExpandLessIcon /></>}
       </Button>
     </div>
   );

@@ -23,7 +23,7 @@ function TabPanel(props) {
 
 export const AttributeProduct = ({ attr }) => {
   const classes = useStyles();
-  const [value, setValue] = useState('desc');
+  const [value, setValue] = useState('param');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

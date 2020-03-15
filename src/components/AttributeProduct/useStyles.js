@@ -18,7 +18,7 @@ export const useStyles = makeStyles(theme => ({
         width: '100%',
         maxWidth: 500, 
         margin: '0 auto',
-        display: 'inherit'
+        display: 'flex',
     },
     moreEffect:{
         position: 'absolute',
