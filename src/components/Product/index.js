@@ -10,7 +10,7 @@ export const Product = ({ info, inLine }) => {
   const { bestPrice } = promotionPrices[0] || '0';
 
   return (
-    <Link to={`product/${info.sku}`}>
+    <Link to={`/product/${info.sku}`}>
       <div className={`${classes.cardContainer} ${ Boolean(inLine) ? classes.inLineCardContainer:''}`}>
         <div className={classes.header}>
           {info.images.length > 0 && (

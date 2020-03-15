@@ -5,6 +5,7 @@ export const useStyles = makeStyles(theme => ({
     padding: '10px',
     flexDirection: 'column',
     backgroundColor: theme.palette.common.white,
+    minWidth: 200,
     '&:hover': {
       boxShadow: theme.shape.boxShadow
     },
