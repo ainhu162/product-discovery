@@ -6,6 +6,8 @@ function useCalcularPromoPercent(sellPrice, promoPrice) {
   const calcPrice = useCallback(() => {
       if (sellPrice > promoPrice) {
           setPromoPercent(~~(100 - (promoPrice * 100 / sellPrice)))
+      }else {
+        setPromoPercent(0)
       }
     }, [sellPrice, promoPrice]);
 

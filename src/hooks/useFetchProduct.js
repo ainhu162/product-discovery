@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actFetchProductRequest } from '../actions/product';
-export default function useFetchProduct(query, pageNumber) {
+export default function useFetchProduct(pageNumber) {
   const [hasMore, setHasMore] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector(state => state.products);
@@ -12,8 +12,10 @@ export default function useFetchProduct(query, pageNumber) {
       setHasMore(false)
     }
   },[products.productList, products.totalItems]);
+
   useEffect(() => {
-    dispatch(actFetchProductRequest(query, pageNumber));
-  }, [query, pageNumber]);
-  return hasMore
+    dispatch(actFetchProductRequest(products.query, pageNumber));
+  }, [pageNumber]);
+
+  return [hasMore, products.productList]
 }

@@ -15,14 +15,20 @@ export const useStyles = makeStyles(theme => ({
   },
   searchIcon: {
     cursor: 'pointer',
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    height: '100%',
+    zIndex: 1,
   },
 
   inputInput: {
     transition: theme.transitions.create('width'),
+    padding: theme.spacing(1, 1, 1, 7),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: 200
+      
     }
   },
   sectionDesktop: {

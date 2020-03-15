@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
         page: extra.page,
         totalItems: extra.totalItems,
       }
-      if(extra.page == 1){
+      if(extra.page === 1){
         return {
           ...state,
           ...newState,

@@ -1,48 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme => ({
-  cardContainer: {
-    display: 'flex',
-    padding: '10px',
-    flexDirection: 'column',
-    backgroundColor: theme.palette.common.white,
-    '&:hover': {
-      boxShadow: theme.shape.boxShadow
-    },
-  },
-  header: {
-    justifyContent: 'center',
-    display: 'flex',
-    alignItems: 'center',
-    height: '250px',
-    [theme.breakpoints.down('md')]: {
-      height: 'auto',
-    }
-  },
-  inLineCardContainer: {
-    [theme.breakpoints.down('md')]: {
-      display: 'inline-block'
-    },
-    '& > div': {
-      [theme.breakpoints.down('md')]: {
-        width: '40%',
-        float: 'left'
-      }
-    }
-  },
-  headerImg: {
-    maxWidth: '90%',
-    maxHeight: '100%',
-
-  },
-  title: {
-    fontSize: 14,
-    lineHeight: '19px',
-    color: theme.palette.text.primary,
-    height: '40px',
-    '-webkit-line-clamp': '2',
-    '-webkit-box-orient': 'vertical',
-    overflow: 'hidden',
-    display: '-webkit-box'
+  inlinePrice: {
+    display: 'flex'
   },
   bestPrice: {
     fontSize: 15,
@@ -58,7 +17,8 @@ export const useStyles = makeStyles(theme => ({
   },
   sellerPriceContainer: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginLeft: theme.spacing(0.5)
   },
   sellerPrice: {
     fontSize: 12,
@@ -86,5 +46,8 @@ export const useStyles = makeStyles(theme => ({
       borderBottom: '7px solid transparent',
       borderRight: `6px solid ${theme.palette.primary.main}`
     }
+  },
+  goBack: {
+    minWidth:'auto'
   }
 }));

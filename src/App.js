@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import routes from './routes';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import { Header } from './components/Header';
 import './styles.scss';
 const showContentMenus = routes => {
   let result = null;
