@@ -1,25 +1,10 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Typography, Box } from '@material-ui/core';
+import { Tabs, Tab } from '@material-ui/core';
 import { useStyles } from './useStyles';
 import { Description } from './Description';
 import { Parameter } from './Parameter';
 import { ComparePrice } from './ComparePrice';
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-  return (
-    <Typography
-      component='div'
-      role='tabpanel'
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box p={3}>{children}</Box>}
-    </Typography>
-  );
-}
+import { TabPanel } from '../commons/TabPanel';
 
 export const AttributeProduct = ({ attr }) => {
   const classes = useStyles();
