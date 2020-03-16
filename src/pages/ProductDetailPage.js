@@ -21,7 +21,7 @@ const ProductDetailPage = () => {
   const { detail, isError } = product;
   const { price, promotionPrices } = detail;
   const { sellPrice } = price || '0';
-  const { bestPrice } = promotionPrices ? promotionPrices[0] : '0';
+  const { bestPrice } = promotionPrices && promotionPrices.length > 0 ? promotionPrices[0] : "0";
   useEffect(() => {
     dispatch(actGetProductDetail(id));
   }, [id]);
@@ -39,7 +39,7 @@ const ProductDetailPage = () => {
         <Grid container justify='center' style={{ marginTop: '1rem' }}>
           <Grid item xs={12} md={4}>
             <Paper square>
-              <Slider images={detail.images} />
+              {detail.images && <Slider images={detail.images} />}
             </Paper>
           </Grid>
           <Grid item xs={12} md={10}>

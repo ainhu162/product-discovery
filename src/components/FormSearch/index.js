@@ -17,6 +17,7 @@ export const FormSearch = () => {
     const { value } = e.target;
     setQuery(value);
   };
+  
   return (
     <div className={classes.search}>
       <form onSubmit={handleSearch}>

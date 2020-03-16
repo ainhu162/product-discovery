@@ -9,7 +9,7 @@ const renderParameter = (attrs, classes) => {
     result = attrs.map((attr, index) => {
       return (
         <tr
-          key={attr.priority}
+          key={index}
           className={!Boolean(index % 2) ? classes.rowEven : ''}
         >
           <td className={`${classes.col} ${classes.colLeft}`}>{attr.name}</td>
@@ -23,7 +23,7 @@ const renderParameter = (attrs, classes) => {
 export const Parameter = ({ attr }) => {
   const classes = useStyles();
   const [isShow, setIsShow] = useState(false);
-  return (
+  return attr ? (
     <div>
       <div className={ !isShow ? classes.shortDescription:''}>
         <table className={classes.tableParameter}>
@@ -34,6 +34,5 @@ export const Parameter = ({ attr }) => {
         {!isShow && <div className={classes.moreEffect}></div>}
         {!isShow ? <>Hiển thị nhiều hơn <ExpandMoreIcon /></> : <>Ẩn bớt <ExpandLessIcon /></>}
       </Button>
-    </div>
-  );
+    </div>):(<div>Đang cập nhật</div>)
 };

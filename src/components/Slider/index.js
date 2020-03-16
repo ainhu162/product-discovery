@@ -12,7 +12,6 @@ export const Slider = ({ images }) => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images ? images.length : 0;
-
   const handleStepChange = step => {
     setActiveStep(step);
   };
@@ -24,7 +23,7 @@ export const Slider = ({ images }) => {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {images &&
+        {images  &&
           images.map((step, index) => (
             <div key={step.url}>
               {Math.abs(activeStep - index) <= 2 ? (

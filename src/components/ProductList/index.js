@@ -30,6 +30,7 @@ export const ProductList = () => {
   }, [loading, hasMore]);
 
   useEffect(() => {
+    console.log(query)
     setPageNumber(1)
   }, [query])
 

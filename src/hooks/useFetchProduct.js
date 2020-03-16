@@ -15,7 +15,7 @@ export default function useFetchProduct(pageNumber) {
 
   useEffect(() => {
     dispatch(actFetchProductRequest(products.query, pageNumber));
-  }, [pageNumber]);
+  }, [products.query, pageNumber]);
 
   return [hasMore, products.productList]
 }
