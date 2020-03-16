@@ -62,7 +62,7 @@ const ProductDetailPage = () => {
               </Grid>
               <Grid item xs={12}>
                 <Paper square>
-                  <RelateProduct query={detail.productLine ? detail.productLine.name : ''}/>
+                  <RelateProduct id={detail.sku} query={detail.productLine ? detail.productLine.name : ''}/>
                 </Paper>
               </Grid>
               <Grid item xs={12} style={{ padding: theme.spacing(2, 0) }}>
